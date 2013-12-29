@@ -1,5 +1,4 @@
 module.exports = { 
   cookieSecret: 'myblog', 
-  db: 'blog', 
-  host: 'localhost'
+  url: 'mongodb://admin:admin@linus.mongohq.com:10025/blog'
 };
