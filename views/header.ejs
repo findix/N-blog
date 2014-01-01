@@ -1,15 +1,84 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8" />
-<title>Blog</title>
-<link rel="stylesheet" href="/stylesheets/style.css">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>FindiX Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- stylesheet -->
+    <link href="/stylesheets/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <!-- icon -->
+    <link rel="icon" href="http://www.find1x.com/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="http://www.find1x.com/favicon.ico" type="image/x-icon" />
+
+    <script src="/javascript/jquery.js"></script>
+    <script src="/javascript/jquery-ui.js"></script>
+    <script src="/javascript/bootstrap.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+	<script src="../../assets/js/html5shiv.js"></script>
+	<script src="../../assets/js/respond.min.js"></script>
+	<![endif]-->
 </head>
 <body>
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand">FindiX Studio</a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+            <li>
+                <a href="http://www.find1x.com">搜索</a>
+            </li>
+            <li>
+                <a href="http://zhan.renren.com/findix">小站</a>
+            </li>
+            <li class="active">
+                <a href="http://blog.find1x.com">博客</a>
+            </li>
+            <li>
+                <a href="http://www.find1x.com/works.html">项目</a>
+            </li>
+            <li>
+                <a href="http://findix.pp.163.com/">摄影</a>
+            </li>
+            <li>
+                <a href="http://github.com/findix">Github</a>
+            </li>
+            <li>
+                <a href="http://www.litpo.com">LITPO</a>
+            </li>
+            <li>
+                <a href="http://ddns.find1x.com:8080/dianfan">人脸识别</a>
+            </li>
+            <li>
+                <a href="http://www.find1x.com/resume.html">简历</a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                <a href="http://mail.find1x.com/" class="navbar-brand" id="mail">邮箱&nbsp;&nbsp;</a>
+            </li>
+        </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+</div>
 
-<header>
+<header style="margin-top:50px">
 <h1><%= title %></h1>
 </header>
+
 
 <nav>
 <span><a title="主页" href="/">home</a></span>
@@ -22,7 +91,6 @@
   <span><a title="登出" href="/logout">logout</a></span>
 <% } else { %>
   <span><a title="登录" href="/login">login</a></span>
-  <span><a title="注册" href="/reg">register</a></span>
 <% } %>
 <span><form action="/search" method="GET"><input type="text" name="keyword" placeholder="SEARCH" class="search" /></form></span>
 </nav>
